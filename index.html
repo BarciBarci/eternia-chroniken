@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Eternia Chroniken – Die Geschichte von He-Man, seinen Freunden und Feinden</title>
+  <meta name="description" content="Eine offene, inoffizielle Fan-Chronik über He-Man, Schloss Grayskull, Skeletor und die Gefährten, die Eternia über Jahrzehnte begleiten. 34 Charaktere, Zeitleiste, Fraktionen und Hintergründe.">
+  <meta name="author" content="Eternia Chroniken Contributors">
+  <meta name="theme-color" content="#070510">
+  <meta name="color-scheme" content="dark light">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:site_name" content="Eternia Chroniken">
+  <meta property="og:title" content="Eternia Chroniken – Die Legende von He-Man">
+  <meta property="og:description" content="Die Geschichte von He-Man, seinen Freunden und Feinden. 34 Figuren, 8 Kapitel, zwei Welten – offen, werbefrei und ohne Abhängigkeiten.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Eternia Chroniken – ein goldener Schwert-Emblem über einem dunklen Sternenhimmel">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Eternia Chroniken – Die Legende von He-Man">
+  <meta name="twitter:description" content="Die Geschichte von He-Man, seinen Freunden und Feinden. 34 Figuren, 8 Kapitel, zwei Welten – offen und ohne Abhängigkeiten.">
+  <meta name="twitter:image" content="assets/img/og-image.png">
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="preload" href="assets/fonts/cinzel-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="assets/js/data.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Eternia Chroniken",
+    "inLanguage": "de",
+    "description": "Inoffizielle, offene Fan-Chronik über He-Man, seine Freunde, seine Feinde und die Welt Eternia.",
+    "isAccessibleForFree": true,
+    "license": "https://opensource.org/licenses/MIT"
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+  <div class="scroll-progress" aria-hidden="true"><span id="scroll-progress-bar"></span></div>
+
+  <!-- Icon-Sprite: wird von HTML und JavaScript gemeinsam genutzt. -->
+  <svg class="icon-sprite" aria-hidden="true" focusable="false" width="0" height="0">
+    <defs>
+      <symbol id="i-sword" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2.2 15 6v8.5H9V6l3-3.8Z"/><path d="M5.5 14.5h13"/><path d="M12 14.5V20"/><circle cx="12" cy="21.2" r="1.3"/>
+      </symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2.8 20 6v5.2c0 4.7-3.2 8.3-8 10-4.8-1.7-8-5.3-8-10V6l8-3.2Z"/><path d="M12 7v8M9 10h6"/>
+      </symbol>
+      <symbol id="i-gear" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="3.2"/><circle cx="12" cy="12" r="8.2"/>
+        <path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M18.7 5.3l-2.1 2.1M7.4 16.6l-2.1 2.1"/>
+      </symbol>
+      <symbol id="i-falcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 5.2c-2.2.3-4 1.4-5.3 3.1L12 13.2 8.3 8.3C7 6.6 5.2 5.5 3 5.2c.3 2.2 1.4 4 3.1 5.3L12 16.6l5.9-6.1c1.7-1.3 2.8-3.1 3.1-5.3Z"/><path d="M12 16.6v4.6"/>
+      </symbol>
+      <symbol id="i-orb" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="10" cy="14" r="5.3"/><path d="M14 10 21 3M17.2 3H21v3.8"/><path d="M3 8.2 3.5 8M7 3l.3 1.5M3.4 3.6 4 4.1"/>
+      </symbol>
+      <symbol id="i-cat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4.5 9.2 6 3.5l4 3h4l4-3 1.5 5.7c.8 1.5 1 3.2.2 5.1-1 2.6-3.8 4.3-7.7 4.3s-6.7-1.7-7.7-4.3c-.8-1.9-.6-3.6.2-5.1Z"/>
+        <circle cx="9.2" cy="10.6" r=".9" fill="currentColor" stroke="none"/><circle cx="14.8" cy="10.6" r=".9" fill="currentColor" stroke="none"/>
+        <path d="M9 14.4c1.8 1.2 4.2 1.2 6 0"/><path d="M2 11.8 5 12.8M22 11.8l-3 1"/>
+      </symbol>
+      <symbol id="i-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m12 2.8 2.8 5.9 6.4.8-4.7 4.4 1.2 6.4-5.7-3.1-5.7 3.1 1.2-6.4L3 9.5l6.4-.8L12 2.8Z"/>
+      </symbol>
+      <symbol id="i-castle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 21V8.5h3.5V5h3v3.5h5V5h3v3.5H21V21H3Z"/><path d="M9.5 21v-5h5v5"/><path d="M6 12h1.5M16.5 12H18"/>
+      </symbol>
+      <symbol id="i-mask" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 4.8c4.1-1.4 11.9-1.4 16 0v6.5c0 4.7-3.2 8.2-8 8.2s-8-3.5-8-8.2V4.8Z"/>
+        <path d="M8 10c.8-1 2.2-1 3 0M13 10c.8-1 2.2-1 3 0"/><path d="M9.5 14.6c1.6 1.2 3.4 1.2 5 0"/>
+      </symbol>
+      <symbol id="i-ram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 7.4c-2.8 0-4.8 2-4.8 4.7 0 3.2 2.4 5.4 4.8 5.4s4.8-2.2 4.8-5.4c0-2.7-2-4.7-4.8-4.7Z"/>
+        <path d="M7.4 9.5C5.2 8 4.1 5.6 5.3 3.9c1-1.5 3.3-1.2 3.8.8M16.6 9.5c2.2-1.5 3.3-3.9 2.1-5.6-1-1.5-3.3-1.2-3.8.8"/>
+        <circle cx="10.1" cy="11.8" r=".8" fill="currentColor" stroke="none"/><circle cx="13.9" cy="11.8" r=".8" fill="currentColor" stroke="none"/>
+        <path d="M10.5 15c1 .7 2 .7 3 0"/>
+      </symbol>
+      <symbol id="i-fist" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M6.5 11.6V7a1.5 1.5 0 0 1 3 0v4M9.5 11V5.2a1.5 1.5 0 0 1 3 0V11M12.5 11V6.1a1.5 1.5 0 0 1 3 0V11M15.5 11V7.6a1.5 1.5 0 0 1 3 0V15c0 3.3-2.7 6-6 6h-1.3c-1.7 0-3.3-.9-4.2-2.4L4.4 13.2a1.6 1.6 0 0 1 2.7-1.7L8.5 14"/>
+      </symbol>
+      <symbol id="i-leaf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20.5 3.5C10.5 3.5 4 9.5 4 17c0 1.2.2 2.2.6 3 3-6 7.7-9.8 13.4-11.5-4.7 2.8-8 6.8-9.7 12 7.5 1.3 13.7-4 13.7-12 0-1.6-.2-3.2-1.5-5Z"/><path d="M4.5 21c3-6 7.5-10 13-12"/>
+      </symbol>
+      <symbol id="i-wings" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 11.4C9.7 7.7 6.4 5.6 2 5.3c.9 3.8 3 6.5 6.3 8.2l3.7-2.1ZM12 11.4c2.3-3.7 5.6-5.8 10-6.1-.9 3.8-3 6.5-6.3 8.2l-3.7-2.1Z"/><path d="M12 9.5V21"/>
+      </symbol>
+      <symbol id="i-wind" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 8h9a3 3 0 1 0-3-3M3 12h13a3 3 0 1 1-3 3M3 16h6a2.5 2.5 0 1 1-2.5 2.5"/>
+      </symbol>
+      <symbol id="i-scales" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 3v18M7 21h10M4 7h16M4 7l-2.4 5.2a3.1 3.1 0 0 0 5.3 0L4 7ZM20 7l-2.4 5.2a3.1 3.1 0 0 0-5.3 0L20 7Z"/><circle cx="12" cy="4.2" r="1.2"/>
+      </symbol>
+      <symbol id="i-flame" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2.4c1.2 3.3-.4 4.9-1.8 6.4-1.5 1.7-2.9 3.3-2.9 5.9 0 3.6 2.6 6.3 6.2 6.3s6.2-2.8 6.2-6.5c0-2.6-1.2-4.6-2.7-6.3-.9-1-1.8-2-2-3.4-1.2.7-1.9 1.7-2.2 2.8-.5-1.5-.7-3.3-.8-5.2Z"/>
+        <path d="M12 21c-1.4 0-2.5-1.1-2.5-2.6 0-1.3 1-2.2 2.5-4.1 1.5 1.9 2.5 2.8 2.5 4.1 0 1.5-1.1 2.6-2.5 2.6Z"/>
+      </symbol>
+      <symbol id="i-comet" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="8" cy="16" r="3.4"/><path d="M11 13 21 3M15.5 3H21v5.5M12.7 8.3l3 3"/>
+      </symbol>
+      <symbol id="i-crown" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3.5 8.5 7 12l5-7 5 7 3.5-3.5-1.6 10.5H5.1L3.5 8.5Z"/><path d="M5.1 19h13.8"/>
+      </symbol>
+      <symbol id="i-skull" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2.8c-4.4 0-7 3-7 6.7 0 2.3 1.1 3.9 2.6 5v2.7c0 1 .8 1.8 1.8 1.8h5.2c1 0 1.8-.8 1.8-1.8v-2.7c1.5-1.1 2.6-2.7 2.6-5 0-3.7-2.6-6.7-7-6.7Z"/>
+        <circle cx="9" cy="10" r="1.5" fill="currentColor" stroke="none"/><circle cx="15" cy="10" r="1.5" fill="currentColor" stroke="none"/>
+        <path d="m12 12.2-1 2.1h2l-1-2.1Z" fill="currentColor" stroke="none"/><path d="M10 16.5v3.3M14 16.5v3.3"/>
+      </symbol>
+      <symbol id="i-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M2.5 12S6 5.8 12 5.8 21.5 12 21.5 12 18 18.2 12 18.2 2.5 12 2.5 12Z"/><circle cx="12" cy="12" r="3.2"/><circle cx="12" cy="12" r="1.2" fill="currentColor" stroke="none"/>
+      </symbol>
+      <symbol id="i-three-eyes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="6.5" r="2.6"/><circle cx="6.8" cy="16" r="2.6"/><circle cx="17.2" cy="16" r="2.6"/>
+        <circle cx="12" cy="6.5" r=".9" fill="currentColor" stroke="none"/><circle cx="6.8" cy="16" r=".9" fill="currentColor" stroke="none"/><circle cx="17.2" cy="16" r=".9" fill="currentColor" stroke="none"/>
+        <path d="M10 8.6 8.4 13.4M14 8.6l1.6 4.8M9.4 16h5.2"/>
+      </symbol>
+      <symbol id="i-paw" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <ellipse cx="12" cy="15.5" rx="4.6" ry="3.8"/><circle cx="5.4" cy="10.5" r="1.8"/><circle cx="9.4" cy="6.6" r="1.8"/><circle cx="14.6" cy="6.6" r="1.8"/><circle cx="18.6" cy="10.5" r="1.8"/>
+      </symbol>
+      <symbol id="i-trident" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2v20M5 5v6a3 3 0 0 0 6 0V7M19 5v6a3 3 0 0 1-6 0V7M8 22h8"/><path d="M5 5V2.5M19 5V2.5"/>
+      </symbol>
+      <symbol id="i-jaw" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 7h16v5.5H4z"/><path d="M4 12.5c0 4.1 3.6 7.5 8 7.5s8-3.4 8-7.5"/><path d="M7.5 7V3.5M12 7V3M16.5 7V3.5M8.5 16.2h7"/>
+      </symbol>
+      <symbol id="i-tail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3.5 20.5c1-7 4.5-12 10-14.5C16 5 19 5 21 6"/><path d="M18.5 2.8 21 6l-3.2 2.4"/><path d="M3.5 20.5 2 17"/>
+      </symbol>
+      <symbol id="i-claw" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 19c1-6 4-10.5 8.5-12M9 21c.5-6 3-10.5 7.5-12.5M15 21c0-4 1.5-7.5 4.5-9.5"/><path d="M3 21h18"/>
+      </symbol>
+      <symbol id="i-spider" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="14" r="3.3"/><circle cx="12" cy="8.4" r="1.8"/>
+        <path d="M9.1 12.2 5.3 9.4 3.8 5.8M9 15.2H5l-2 3.4M14.9 12.2l3.8-2.8 1.5-3.6M15 15.2h4l2 3.4M10.4 9.1 8.6 5.2M13.6 9.1l1.8-3.9"/>
+      </symbol>
+      <symbol id="i-two-heads" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="8" cy="7.5" r="3.2"/><circle cx="16" cy="7.5" r="3.2"/>
+        <path d="M8 10.7v3.5c0 2.8 1.5 4.9 4 6.3 2.5-1.4 4-3.5 4-6.3v-3.5"/><path d="M5.5 17.8c2 1 4.2 1.3 6.5.7"/>
+      </symbol>
+      <symbol id="i-spikes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="3.2"/><path d="M12 2v4.8M12 17.2V22M2 12h4.8M17.2 12H22M5 5l3.4 3.4M15.6 15.6 19 19M19 5l-3.4 3.4M8.4 15.6 5 19"/>
+      </symbol>
+      <symbol id="i-stink" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M6 20h12M8 20v-3.5c-1.5-1-2-2.5-1.5-4 .4-1.2 1.4-1.9 2.6-2 .3-2.1 1.6-3.4 3.4-3.4s3.1 1.3 3.4 3.4c1.2.1 2.2.8 2.6 2 .5 1.5 0 3-1.5 4V20"/><path d="M9 8.6c-.8-1-1-2-.5-3M13 7.2c.2-1.3 1-2.2 2-2.6"/>
+      </symbol>
+      <symbol id="i-robot" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="5" y="7" width="14" height="12" rx="2.5"/><path d="M12 3v4M9 3h6"/>
+        <circle cx="9.5" cy="12" r="1.2" fill="currentColor" stroke="none"/><circle cx="14.5" cy="12" r="1.2" fill="currentColor" stroke="none"/>
+        <path d="M9 16h6M2.5 11v4M21.5 11v4"/>
+      </symbol>
+      <symbol id="i-bat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 5c-1.5-2-4-2.5-5.5-1.5C4 5 2.5 9 2 14c2.8-1 5-1.5 7.5-1.5L12 17l2.5-4.5C17 12.5 19.2 13 22 14c-.5-5-2-9-4.5-10.5C16 2.5 13.5 3 12 5Z"/><path d="M9.5 8.5 8 5M14.5 8.5 16 5"/>
+        <circle cx="9.5" cy="10" r=".8" fill="currentColor" stroke="none"/><circle cx="14.5" cy="10" r=".8" fill="currentColor" stroke="none"/>
+      </symbol>
+      <symbol id="i-serpent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 18c3-4 6-4 9-1s6 3 9-1"/><path d="M3 13c3-4 6-4 9-1s6 3 9-1"/><path d="M4 8c3-3 6-3 9-1 2 1.3 4 1.7 7 0"/><path d="M18 5.5c1.5.4 2.5 1.4 3 3"/><circle cx="21" cy="8" r="1"/>
+      </symbol>
+      <symbol id="i-cobra" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M8 21c-3-2-4-5-2.5-8C7 9.5 11 8 12 3c4 2 6 5.5 6 9.5 0 2.5-1 4.5-2.5 6"/>
+        <path d="M12 3c-1.7 1-2.5 2.3-2.5 3.8 0 2 1.2 3.2 2.5 4.2 1.3-1 2.5-2.2 2.5-4.2C14.5 5.3 13.7 4 12 3Z"/>
+        <circle cx="10.5" cy="8" r=".7" fill="currentColor" stroke="none"/><circle cx="13.5" cy="8" r=".7" fill="currentColor" stroke="none"/>
+        <path d="M12 11v3l2 1M12 14l-2 1"/>
+      </symbol>
+      <symbol id="i-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 5.5c3-1.3 6-1.3 9 0 3-1.3 6-1.3 9 0v14c-3-1.3-6-1.3-9 0-3-1.3-6-1.3-9 0v-14Z"/><path d="M12 5.5v14"/>
+      </symbol>
+      <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/>
+      </symbol>
+      <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+        <path d="m5 5 14 14M19 5 5 19"/>
+      </symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+        <path d="M3 6h18M3 12h18M3 18h18"/>
+      </symbol>
+      <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+        <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/>
+      </symbol>
+      <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20.2 15.2A8.5 8.5 0 0 1 8.8 3.8a8.5 8.5 0 1 0 11.4 11.4Z"/>
+      </symbol>
+      <symbol id="i-github" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2.17c-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.24.72-1.53-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.59.23 2.76.11 3.05.73.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.39-5.25 5.68.41.35.77 1.05.77 2.12v3.14c0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z"/>
+      </symbol>
+      <symbol id="i-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 12h15M13 6l6 6-6 6"/>
+      </symbol>
+      <symbol id="i-arrow-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 12H5M11 6l-6 6 6 6"/>
+      </symbol>
+      <symbol id="i-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3"/>
+      </symbol>
+      <symbol id="i-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14 4h6v6M20 4 11 13"/><path d="M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"/>
+      </symbol>
+      <symbol id="i-dice" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="3" width="18" height="18" rx="4"/>
+        <circle cx="8" cy="8" r="1" fill="currentColor" stroke="none"/><circle cx="16" cy="8" r="1" fill="currentColor" stroke="none"/>
+        <circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/><circle cx="8" cy="16" r="1" fill="currentColor" stroke="none"/><circle cx="16" cy="16" r="1" fill="currentColor" stroke="none"/>
+      </symbol>
+      <symbol id="i-lightning" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M13.5 2 4 13.5h6L9.5 22 20 10.5h-6L13.5 2Z"/>
+      </symbol>
+      <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m4 12.5 5 5L20 6.5"/>
+      </symbol>
+      <symbol id="i-chevron-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m6 9 6 6 6-6"/>
+      </symbol>
+      <symbol id="i-spark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2c.7 5.5 4.5 9.3 10 10-5.5.7-9.3 4.5-10 10-.7-5.5-4.5-9.3-10-10 5.5-.7 9.3-4.5 10-10Z"/>
+      </symbol>
+      <symbol id="i-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 20V5M6 11l6-6 6 6"/>
+      </symbol>
+      <symbol id="i-info" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="9"/><path d="M12 11v5"/><circle cx="12" cy="7.5" r=".9" fill="currentColor" stroke="none"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <canvas id="starfield" aria-hidden="true"></canvas>
+  <div class="aurora" aria-hidden="true"></div>
+
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="Eternia Chroniken – zum Anfang">
+        <span class="brand__mark" aria-hidden="true">
+          <svg class="icon"><use href="#i-sword"></use></svg>
+        </span>
+        <span class="brand__text">
+          <span class="brand__name">Eternia</span>
+          <span class="brand__sub">Chroniken</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Hauptnavigation">
+        <a href="#geschichte">Geschichte</a>
+        <a href="#gefaehrten">Gefährten</a>
+        <a href="#charaktere">Charaktere</a>
+        <a href="#fraktionen">Fraktionen</a>
+        <a href="#chronik">Chronik</a>
+        <a href="#wissen">Wissen</a>
+        <a href="#open-source">Open Source</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="icon-btn repo-link" href="https://github.com/BarciBarci/eternia-chroniken" target="_blank" rel="noopener noreferrer" aria-label="Quellcode auf GitHub ansehen">
+          <svg class="icon"><use href="#i-github"></use></svg>
+        </a>
+        <button class="icon-btn theme-toggle" id="theme-toggle" type="button" aria-label="Helles Design aktivieren" aria-pressed="false">
+          <svg class="icon theme-icon theme-icon--sun"><use href="#i-sun"></use></svg>
+          <svg class="icon theme-icon theme-icon--moon"><use href="#i-moon"></use></svg>
+        </button>
+        <button class="icon-btn menu-toggle" id="menu-toggle" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-nav">
+          <svg class="icon"><use href="#i-menu"></use></svg>
+        </button>
+      </div>
+    </div>
+
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile Navigation" hidden>
+      <a href="#geschichte">Geschichte</a>
+      <a href="#gefaehrten">Gefährten</a>
+      <a href="#charaktere">Charaktere</a>
+      <a href="#fraktionen">Fraktionen</a>
+      <a href="#chronik">Chronik</a>
+      <a href="#wissen">Wissen</a>
+      <a href="#open-source">Open Source</a>
+      <a class="mobile-nav__repo repo-link" href="https://github.com/BarciBarci/eternia-chroniken" target="_blank" rel="noopener noreferrer">
+        <svg class="icon"><use href="#i-github"></use></svg> Quellcode auf GitHub
+      </a>
+    </nav>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__haze" aria-hidden="true"></div>
+      <div class="wrap hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow"><span class="eyebrow__line" aria-hidden="true"></span> Eine Fan-Chronik · Open Source</p>
+          <h1 id="hero-title">
+            <span class="hero__title-main">Eternia</span>
+            <span class="hero__title-sub">Chroniken</span>
+          </h1>
+          <p class="hero__tagline">Die Geschichte von He-Man, seinen Freunden und den Schatten, die Eternia nie loslässt.</p>
+          <p class="hero__lede">Von den Türmen von Grayskull bis zu den Feuern von Snake Mountain: eine erzählende Reise durch die Legende – mit <span data-count="characters">34</span> Charakteren, einer Zeitleiste und einem Geheimnis, das zwei Welten verbindet.</p>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#geschichte">
+              <span>Die Legende beginnen</span>
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+            </a>
+            <a class="btn btn--ghost" href="#charaktere">Charaktere entdecken</a>
+          </div>
+
+          <button class="power-btn" id="power-btn" type="button">
+            <span class="power-btn__icon" aria-hidden="true"><svg class="icon"><use href="#i-lightning"></use></svg></span>
+            <span class="power-btn__text">
+              <strong>Die Macht rufen</strong>
+              <small>Berühre das Erbe von Grayskull</small>
+            </span>
+          </button>
+
+          <dl class="hero__stats">
+            <div><dt>Figuren</dt><dd data-count="characters">34</dd></div>
+            <div><dt>Kapitel</dt><dd data-count="timeline">8</dd></div>
+            <div><dt>Welten</dt><dd>2</dd></div>
+            <div><dt>Abhängigkeiten</dt><dd>0</dd></div>
+          </dl>
+        </div>
+
+        <div class="hero__visual">
+          <div class="emblem" aria-hidden="true">
+            <div class="emblem__glow"></div>
+            <svg class="emblem__svg" viewBox="0 0 520 520" role="presentation">
+              <defs>
+                <linearGradient id="goldGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#fff6d5"/>
+                  <stop offset=".42" stop-color="#f6c453"/>
+                  <stop offset="1" stop-color="#9a5b12"/>
+                </linearGradient>
+                <linearGradient id="tealGrad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#67e8f9"/>
+                  <stop offset="1" stop-color="#7c3aed"/>
+                </linearGradient>
+                <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
+                  <stop offset="0" stop-color="#f6c453" stop-opacity=".26"/>
+                  <stop offset="1" stop-color="#f6c453" stop-opacity="0"/>
+                </radialGradient>
+                <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+                  <feGaussianBlur stdDeviation="6" result="blur"/>
+                  <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                </filter>
+                <filter id="bigGlow" x="-60%" y="-60%" width="220%" height="220%">
+                  <feGaussianBlur stdDeviation="18" result="blur"/>
+                  <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                </filter>
+              </defs>
+
+              <circle cx="260" cy="260" r="246" fill="url(#coreGlow)"/>
+              <g class="emblem__rings" fill="none" stroke="url(#goldGrad)">
+                <circle cx="260" cy="260" r="238" stroke-opacity=".26"/>
+                <circle cx="260" cy="260" r="220" stroke-opacity=".55" stroke-dasharray="2 10"/>
+                <circle cx="260" cy="260" r="198" stroke-opacity=".16"/>
+                <circle cx="260" cy="260" r="170" stroke-opacity=".36" stroke-dasharray="1 14"/>
+              </g>
+              <g class="emblem__ticks" stroke="url(#goldGrad)" stroke-opacity=".55" stroke-width="1.5">
+                <path d="M260 22v20M260 478v20M22 260h20M478 260h20"/>
+                <path d="M92 92l14 14M414 414l14 14M428 92l-14 14M106 414l-14 14"/>
+              </g>
+              <g class="emblem__stars">
+                <circle cx="118" cy="166" r="2.2"/><circle cx="392" cy="134" r="1.7"/><circle cx="420" cy="330" r="2.4"/>
+                <circle cx="150" cy="388" r="1.6"/><circle cx="332" cy="432" r="1.9"/><circle cx="226" cy="94" r="1.4"/>
+                <circle cx="82" cy="292" r="1.5"/><circle cx="448" cy="236" r="1.4"/>
+              </g>
+
+              <g class="emblem__castle">
+                <path d="M152 456V332h34v-28h26v28h22v-50h26v50h20v-50h26v50h22v-28h26v28h34v124"/>
+                <path d="M214 456v-58a46 46 0 0 1 92 0v58"/>
+                <path d="M170 358h10M340 358h10M246 332v-18M294 332v-18"/>
+                <path d="M260 398v58"/>
+              </g>
+
+              <g class="emblem__sword" filter="url(#softGlow)">
+                <path d="M260 84 292 142v158h-64V142L260 84Z" fill="url(#goldGrad)" stroke="#fff6d5" stroke-opacity=".45" stroke-width="1.5"/>
+                <path d="M260 102v186" stroke="#5b3208" stroke-opacity=".55" stroke-width="2"/>
+                <path d="m260 194-7 10 7 10 7-10-7-10Zm0 42-5 7 5 7 5-7-5-7Z" fill="#3b2206" opacity=".65"/>
+                <path d="M182 300h156c8 0 14 6 14 14v12H168v-12c0-8 6-14 14-14Z" fill="url(#goldGrad)" stroke="#fff6d5" stroke-opacity=".45" stroke-width="1.5"/>
+                <circle cx="196" cy="313" r="10" fill="#0b0718" stroke="#f6c453" stroke-width="2"/>
+                <circle cx="324" cy="313" r="10" fill="#0b0718" stroke="#f6c453" stroke-width="2"/>
+                <rect x="246" y="326" width="28" height="70" rx="10" fill="#2a1740" stroke="url(#goldGrad)" stroke-width="2"/>
+                <path d="M250 340h20M250 354h20M250 368h20M250 382h20" stroke="#f6c453" stroke-opacity=".55" stroke-width="1.5"/>
+                <circle cx="260" cy="407" r="17" fill="#2a1740" stroke="url(#goldGrad)" stroke-width="2"/>
+                <circle cx="260" cy="407" r="6" fill="url(#tealGrad)" filter="url(#softGlow)"/>
+                <path d="m260 288 11 13-11 13-11-13 11-13Z" fill="url(#tealGrad)" filter="url(#softGlow)"/>
+              </g>
+
+              <circle class="emblem__pulse" cx="260" cy="260" r="120" fill="none" stroke="url(#tealGrad)" stroke-opacity=".25"/>
+            </svg>
+
+            <span class="emblem__orb emblem__orb--1"></span>
+            <span class="emblem__orb emblem__orb--2"></span>
+            <span class="emblem__orb emblem__orb--3"></span>
+          </div>
+
+          <span class="realm-chip realm-chip--grayskull" aria-hidden="true">
+            <svg class="icon"><use href="#i-castle"></use></svg> Schloss Grayskull
+          </span>
+          <span class="realm-chip realm-chip--snake" aria-hidden="true">
+            <svg class="icon"><use href="#i-skull"></use></svg> Snake Mountain
+          </span>
+          <span class="realm-chip realm-chip--eternos" aria-hidden="true">
+            <svg class="icon"><use href="#i-crown"></use></svg> Eternos
+          </span>
+          <span class="realm-chip realm-chip--etheria" aria-hidden="true">
+            <svg class="icon"><use href="#i-star"></use></svg> Etheria
+          </span>
+        </div>
+      </div>
+
+      <a class="hero__scroll" href="#geschichte" aria-label="Zur Geschichte scrollen"><span></span></a>
+    </section>
+
+    <section class="section" id="geschichte" aria-labelledby="geschichte-title">
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <p class="kicker"><span>01</span> Die Legende</p>
+          <h2 id="geschichte-title">Ein Prinz. Ein Geheimnis.<br><em>Zwei Welten.</em></h2>
+          <p class="lead">Eternia ist kein friedlicher Ort. Es ist ein Königreich voller alter Mächte, verschollener Völker und einer Burg, um die sich seit Jahrhunderten Legenden ranken. Im Zentrum steht eine Familie – und ein Junge, der lernen muss, dass Stärke erst durch Verantwortung Bedeutung bekommt.</p>
+        </div>
+
+        <div class="story-grid" id="story-grid"></div>
+
+        <blockquote class="pullquote" data-reveal>
+          <svg class="pullquote__mark icon" aria-hidden="true"><use href="#i-spark"></use></svg>
+          <p>Nicht das Schwert macht den Helden. Es ist die Entscheidung, es zu erheben – jeden Tag aufs Neue.</p>
+          <footer>Die Chronik von Eternia</footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="section section--companions" id="gefaehrten" aria-labelledby="gefaehrten-title">
+      <div class="wrap">
+        <div class="section-head section-head--center" data-reveal>
+          <p class="kicker"><span>02</span> Der innere Kreis</p>
+          <h2 id="gefaehrten-title">Die, die bleiben</h2>
+          <p class="lead">Reiche kommen und gehen. Diese fünf Menschen – und ein Tiger – begleiten He-Man durch Siege, Niederlagen und all die Jahre dazwischen. Wähle einen Gefährten, um seine Geschichte zu lesen.</p>
+        </div>
+
+        <div class="companion-wrapper" data-reveal>
+          <div class="companion-tabs" id="companion-tabs" role="tablist" aria-label="Gefährten von He-Man"></div>
+          <div class="companion-panel" id="companion-panel" role="tabpanel" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--roster" id="charaktere" aria-labelledby="charaktere-title">
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <p class="kicker"><span>03</span> Das Who-is-Who</p>
+          <h2 id="charaktere-title">Gesichter einer Legende</h2>
+          <p class="lead">Helden, Verbündete, Schurken und all jene dazwischen. Suche nach Namen, filtere nach Fraktion oder lass den Zufall entscheiden, wen du als Nächstes kennenlernst.</p>
+        </div>
+
+        <div class="roster-toolbar" data-reveal>
+          <div class="search-field">
+            <svg class="icon search-field__icon" aria-hidden="true"><use href="#i-search"></use></svg>
+            <input id="search-input" type="search" placeholder="Charakter suchen …" autocomplete="off" spellcheck="false" aria-label="Charaktere durchsuchen">
+            <button class="search-clear" id="search-clear" type="button" aria-label="Suche löschen" hidden>
+              <svg class="icon" aria-hidden="true"><use href="#i-close"></use></svg>
+            </button>
+            <kbd class="search-field__kbd" aria-hidden="true">/</kbd>
+          </div>
+
+          <div class="filter-chips" id="filter-chips" role="group" aria-label="Nach Fraktion filtern">
+            <button class="chip is-active" type="button" data-filter="alle" aria-pressed="true">Alle <span class="chip__count" data-count-for="alle">34</span></button>
+            <button class="chip" type="button" data-filter="helden" aria-pressed="false">Helden <span class="chip__count" data-count-for="helden">13</span></button>
+            <button class="chip" type="button" data-filter="verbuendete" aria-pressed="false">Verbündete <span class="chip__count" data-count-for="verbuendete">5</span></button>
+            <button class="chip" type="button" data-filter="schurken" aria-pressed="false">Schurken <span class="chip__count" data-count-for="schurken">16</span></button>
+          </div>
+
+          <button class="btn btn--small btn--ghost random-btn" id="random-btn" type="button">
+            <svg class="icon" aria-hidden="true"><use href="#i-dice"></use></svg>
+            <span>Zufall</span>
+          </button>
+        </div>
+
+        <div class="roster-meta" aria-live="polite">
+          <span id="roster-count">34 Charaktere</span>
+          <span class="roster-meta__sep" aria-hidden="true">·</span>
+          <span id="roster-filter-label">aus allen Fraktionen</span>
+        </div>
+
+        <div class="character-grid" id="character-grid"></div>
+
+        <div class="empty-state" id="empty-state" hidden>
+          <span class="empty-state__icon" aria-hidden="true"><svg class="icon"><use href="#i-search"></use></svg></span>
+          <h3>Niemand in dieser Ecke von Eternia</h3>
+          <p>Für diese Suche gibt es keinen Treffer. Versuche einen anderen Namen oder setze die Filter zurück.</p>
+          <button class="btn btn--ghost" type="button" id="reset-filters">Filter zurücksetzen</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="fraktionen" aria-labelledby="fraktionen-title">
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <p class="kicker"><span>04</span> Die Mächte</p>
+          <h2 id="fraktionen-title">Wer steht auf welcher Seite?</h2>
+          <p class="lead">Eternia ist ein Netz aus Loyalitäten. Drei Mächte prägen den Konflikt – und eine vierte Welt hat ihren eigenen Krieg.</p>
+        </div>
+
+        <div class="faction-grid">
+          <button class="faction-card faction-card--helden" type="button" data-faction="helden" data-reveal>
+            <span class="faction-card__top">
+              <span class="faction-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-sword"></use></svg></span>
+              <span class="faction-card__count" data-count-for="helden">13</span>
+            </span>
+            <span class="faction-card__kicker">Licht &amp; Pflicht</span>
+            <span class="faction-card__title">Helden von Grayskull</span>
+            <span class="faction-card__text">Sie verteidigen das Schloss, die Krone und die Menschen, die keine Stimme haben. Nicht alle tragen ein Schwert – aber alle tragen Verantwortung.</span>
+            <span class="faction-card__members">He-Man · Teela · Man-At-Arms · Sorceress · Orko · Battle Cat · She-Ra</span>
+            <span class="faction-card__cta">Mitglieder ansehen <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></span>
+          </button>
+
+          <button class="faction-card faction-card--verbuendete" type="button" data-faction="verbuendete" data-reveal>
+            <span class="faction-card__top">
+              <span class="faction-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-crown"></use></svg></span>
+              <span class="faction-card__count" data-count-for="verbuendete">5</span>
+            </span>
+            <span class="faction-card__kicker">Krone &amp; Himmel</span>
+            <span class="faction-card__title">Hof von Eternos</span>
+            <span class="faction-card__text">Königshaus, Avionier und uralte Drachen: Verbündete kommen mit eigenen Interessen. Genau das macht sie wertvoll – und manchmal unberechenbar.</span>
+            <span class="faction-card__members">König Randor · Königin Marlena · Stratos · Zodac · Granamyr</span>
+            <span class="faction-card__cta">Mitglieder ansehen <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></span>
+          </button>
+
+          <button class="faction-card faction-card--schurken" type="button" data-faction="schurken" data-reveal>
+            <span class="faction-card__top">
+              <span class="faction-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-skull"></use></svg></span>
+              <span class="faction-card__count" data-count-for="schurken">16</span>
+            </span>
+            <span class="faction-card__kicker">Finsternis &amp; Ehrgeiz</span>
+            <span class="faction-card__title">Schatten von Snake Mountain</span>
+            <span class="faction-card__text">Skeletors Hofstaat ist ein Bündnis aus Furcht, Gier und alten Rechnungen. Jeder verfolgt ein eigenes Ziel – und fast jeder würde den anderen verraten.</span>
+            <span class="faction-card__members">Skeletor · Evil-Lyn · Beast Man · Mer-Man · Trap Jaw · Tri-Klops · Hordak · King Hiss</span>
+            <span class="faction-card__cta">Mitglieder ansehen <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></span>
+          </button>
+        </div>
+
+        <div class="etheria-banner" data-reveal>
+          <div class="etheria-banner__copy">
+            <p class="kicker"><span aria-hidden="true">✦</span> Die andere Welt</p>
+            <h3>Etheria hat seinen eigenen Krieg.</h3>
+            <p>Auf der anderen Seite des Universums kämpft She-Ra gegen die Böse Horde. Hordak, einst Feind von Grayskull, regiert dort aus der Fright Zone – und die Schlangenmenschen warten unter Snake Mountain auf ihre Stunde.</p>
+            <div class="etheria-banner__actions">
+              <button class="mini-character" type="button" data-character="she-ra">
+                <span class="mini-character__dot mini-character__dot--gold" aria-hidden="true"></span> She-Ra
+              </button>
+              <button class="mini-character" type="button" data-character="hordak">
+                <span class="mini-character__dot mini-character__dot--crimson" aria-hidden="true"></span> Hordak
+              </button>
+              <button class="mini-character" type="button" data-character="king-hiss">
+                <span class="mini-character__dot mini-character__dot--emerald" aria-hidden="true"></span> King Hiss
+              </button>
+            </div>
+          </div>
+          <div class="etheria-banner__visual" aria-hidden="true">
+            <span class="etheria-banner__planet"></span>
+            <span class="etheria-banner__moon"></span>
+            <svg class="etheria-banner__sword icon"><use href="#i-sword"></use></svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="chronik" aria-labelledby="chronik-title">
+      <div class="wrap">
+        <div class="section-head section-head--center" data-reveal>
+          <p class="kicker"><span>05</span> Die Chronik</p>
+          <h2 id="chronik-title">Acht Kapitel, ein Schicksal</h2>
+          <p class="lead">Von den ersten Wächtern über Keldors Fall bis zur Rückkehr der Schlangenmenschen: eine Zeitleiste der Mächte, die Eternia geformt haben.</p>
+        </div>
+
+        <div class="timeline" id="timeline"></div>
+
+        <p class="timeline-note" data-reveal>
+          <svg class="icon" aria-hidden="true"><use href="#i-info"></use></svg>
+          <span>Die Masters-of-the-Universe-Erzählungen widersprechen sich in Details. Diese Chronik folgt einer lesbaren Mischung aus klassischen Motiven und späteren Neuinterpretationen – Varianten sind an den entsprechenden Stellen markiert.</span>
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="wissen" aria-labelledby="wissen-title">
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <p class="kicker"><span>06</span> Halle der Weisheit</p>
+          <h2 id="wissen-title">Wusstest du …?</h2>
+          <p class="lead">Sechs Details, die selbst langjährige Gefährten von Eternia überraschen können – von Familiengeheimnissen bis zu den Tücken Trollanischer Magie.</p>
+        </div>
+
+        <div class="fact-grid" id="fact-grid"></div>
+
+        <aside class="continuity-note" data-reveal>
+          <span class="continuity-note__icon" aria-hidden="true"><svg class="icon"><use href="#i-book"></use></svg></span>
+          <div>
+            <h3>Eine Legende, viele Erzählungen</h3>
+            <p>Ob Minicomics, Filmation, Kinofilm, 2002er-Serie oder neuere Neuinterpretationen: Jede erzählt Eternia ein wenig anders. Wo sich Versionen widersprechen, markiert diese Chronik die wichtigste Variante, statt eine einzige Wahrheit zu behaupten.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section--open" id="open-source" aria-labelledby="open-source-title">
+      <div class="wrap">
+        <div class="open-grid">
+          <div class="open-copy" data-reveal>
+            <p class="kicker"><span>07</span> Open Source</p>
+            <h2 id="open-source-title">Für alle, die Eternia weitererzählen wollen.</h2>
+            <p class="lead">Diese Chronik ist ein offenes Fanprojekt. Der Code ist frei, die Texte sind einsehbar, und jede Figur kann ergänzt werden. Kein Build-Schritt, kein Framework, keine externen Requests.</p>
+
+            <div class="open-actions">
+              <a class="btn btn--primary repo-link" href="https://github.com/BarciBarci/eternia-chroniken" target="_blank" rel="noopener noreferrer">
+                <svg class="icon" aria-hidden="true"><use href="#i-github"></use></svg>
+                <span>Auf GitHub ansehen</span>
+              </a>
+              <a class="btn btn--ghost" href="CONTRIBUTING.md">
+                <span>Mitwirken</span>
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+              </a>
+            </div>
+
+            <ul class="tech-list">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> Reines HTML, CSS und JavaScript</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> Kein Framework, kein Build-Schritt</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> Kein Tracking, keine Cookies, keine externen Requests</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> Selbst gehostete Schriften unter der SIL Open Font License</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> Code unter der MIT-Lizenz</li>
+            </ul>
+          </div>
+
+          <div class="open-cards" data-reveal>
+            <article class="stat-card">
+              <span class="stat-card__num">0</span>
+              <h3>Abhängigkeiten</h3>
+              <p>Keine Pakete, keine Tracker, keine externen CDNs. Die Seite funktioniert auch offline.</p>
+            </article>
+            <article class="stat-card">
+              <span class="stat-card__num" data-count="characters">34</span>
+              <h3>Charaktere</h3>
+              <p>Jede Figur mit eigener Geschichte, Werten, Motto und Verbindungen zu Freunden und Feinden.</p>
+            </article>
+            <article class="stat-card">
+              <span class="stat-card__num">MIT</span>
+              <h3>Lizenz</h3>
+              <p>Forken, verändern und weitergeben ist ausdrücklich erlaubt. Der Code gehört der Community.</p>
+            </article>
+            <article class="stat-card">
+              <span class="stat-card__num">100%</span>
+              <h3>Statisch</h3>
+              <p>Ein Ordner, ein Hosting-Ziel. Läuft auf GitHub Pages, Netlify oder jedem anderen Webserver.</p>
+            </article>
+          </div>
+        </div>
+
+        <aside class="disclaimer" data-reveal>
+          <span class="disclaimer__icon" aria-hidden="true"><svg class="icon"><use href="#i-info"></use></svg></span>
+          <div>
+            <h3>Inoffizielles Fanprojekt</h3>
+            <p>Masters of the Universe, He-Man, She-Ra und alle zugehörigen Figuren sind Marken und geistiges Eigentum von Mattel. Diese Seite steht in keiner Verbindung zu Mattel und wird nicht von Mattel unterstützt. Alle Texte sind eigenständige, fan-gemachte Zusammenfassungen; alle Illustrationen sind eigene, abstrakte Grafiken. Es wird kein offizielles Artwork verwendet.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <a class="brand brand--footer" href="#top" aria-label="Eternia Chroniken – zum Anfang">
+          <span class="brand__mark" aria-hidden="true"><svg class="icon"><use href="#i-sword"></use></svg></span>
+          <span class="brand__text"><span class="brand__name">Eternia</span><span class="brand__sub">Chroniken</span></span>
+        </a>
+        <p>Die Geschichte von He-Man, seinen Freunden und Feinden. Offen, werbefrei und ohne Abhängigkeiten.</p>
+        <p class="footer-license">Code unter <a href="LICENSE">MIT-Lizenz</a> · Inhalte sind ein inoffizielles Fanprojekt.</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer-Navigation">
+        <h4>Entdecken</h4>
+        <a href="#geschichte">Die Legende</a>
+        <a href="#gefaehrten">Gefährten</a>
+        <a href="#charaktere">Charaktere</a>
+        <a href="#chronik">Chronik</a>
+      </nav>
+
+      <nav class="footer-nav" aria-label="Projekt-Navigation">
+        <h4>Projekt</h4>
+        <a class="repo-link" href="https://github.com/BarciBarci/eternia-chroniken" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="CONTRIBUTING.md">Mitwirken</a>
+        <a href="LICENSE">Lizenz</a>
+        <a href="#open-source">Über das Projekt</a>
+      </nav>
+    </div>
+
+    <div class="wrap footer-bottom">
+      <p>© <span id="year">2026</span> Eternia Chroniken Contributors. Keine Verbindung zu Mattel.</p>
+      <button class="to-top" id="to-top" type="button" aria-label="Nach oben scrollen">
+        <span class="to-top__label">Nach oben</span>
+        <svg class="icon" aria-hidden="true"><use href="#i-up"></use></svg>
+      </button>
+    </div>
+  </footer>
+
+  <div class="dialog" id="character-dialog" hidden>
+    <div class="dialog__backdrop" data-close-dialog></div>
+    <div class="dialog__panel" id="dialog-panel" role="dialog" aria-modal="true" aria-labelledby="dialog-title" tabindex="-1">
+      <button class="dialog__close" id="dialog-close" type="button" aria-label="Dialog schließen">
+        <svg class="icon" aria-hidden="true"><use href="#i-close"></use></svg>
+      </button>
+      <div class="dialog__art" id="dialog-art" aria-hidden="true"></div>
+      <div class="dialog__body" id="dialog-body"></div>
+    </div>
+  </div>
+
+  <div class="power-flash" id="power-flash" aria-hidden="true"></div>
+  <div class="spark-layer" id="spark-layer" aria-hidden="true"></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="sr-only" id="sr-announcer" aria-live="polite"></div>
+
+  <noscript>
+    <div class="noscript">Eternia Chroniken benötigt JavaScript, um die Charaktere und die Zeitleiste anzuzeigen. Die Geschichte bleibt auch ohne Skripte lesbar – aber die interaktive Chronik nicht.</div>
+  </noscript>
+</body>
+</html>

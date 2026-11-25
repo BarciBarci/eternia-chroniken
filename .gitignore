@@ -1,0 +1,22 @@
+# Betriebssystem
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# lokale Entwicklung
+.cache/
+.venv/
+node_modules/
+__pycache__/
+*.pyc
+*.pyo
+*.log
+
+# Editoren
+.vscode/
+.idea/
+
+# Temporäre Dateien
+*.tmp
+*.swp
+*~

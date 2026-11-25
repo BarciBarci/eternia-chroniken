@@ -1,0 +1,239 @@
+<!doctype html>
+<!--
+  Quelle für assets/img/og-image.png.
+  Bei exakt 1200 × 630 Pixeln rendern (z. B. mit einem Headless-Browser)
+  und als PNG speichern. Der Inhalt ist bewusst statisch und unabhängig
+  von der Website-Laufzeit.
+-->
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Eternia Chroniken – Social Card</title>
+<style>
+  @font-face {
+    font-family: 'Cinzel';
+    src: url('../assets/fonts/cinzel-latin.woff2') format('woff2');
+    font-weight: 400 900;
+    font-display: block;
+  }
+  @font-face {
+    font-family: 'Inter';
+    src: url('../assets/fonts/inter-latin.woff2') format('woff2');
+    font-weight: 100 900;
+    font-display: block;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; }
+  body {
+    font-family: 'Inter', sans-serif;
+    color: #f2ecdf;
+    background:
+      radial-gradient(900px 620px at 80% -10%, rgba(124, 58, 237, .26), transparent 62%),
+      radial-gradient(700px 520px at 12% 18%, rgba(13, 148, 136, .13), transparent 62%),
+      radial-gradient(700px 520px at 55% 115%, rgba(190, 24, 93, .12), transparent 62%),
+      #070510;
+  }
+  .frame {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 54px 64px 48px;
+    border: 1px solid rgba(244, 213, 141, .18);
+    overflow: hidden;
+  }
+  .frame::before {
+    content: '';
+    position: absolute;
+    inset: 18px;
+    border: 1px solid rgba(244, 213, 141, .08);
+    border-radius: 6px;
+    pointer-events: none;
+  }
+  .stars {
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 8% 22%, rgba(255,246,213,.7) 0 1px, transparent 2px),
+      radial-gradient(circle at 16% 68%, rgba(255,246,213,.5) 0 1px, transparent 2px),
+      radial-gradient(circle at 28% 12%, rgba(255,246,213,.8) 0 1.5px, transparent 2.5px),
+      radial-gradient(circle at 38% 82%, rgba(255,246,213,.4) 0 1px, transparent 2px),
+      radial-gradient(circle at 47% 31%, rgba(255,246,213,.6) 0 1px, transparent 2px),
+      radial-gradient(circle at 56% 72%, rgba(255,246,213,.5) 0 1px, transparent 2px),
+      radial-gradient(circle at 68% 16%, rgba(255,246,213,.7) 0 1.5px, transparent 2.5px),
+      radial-gradient(circle at 76% 88%, rgba(255,246,213,.4) 0 1px, transparent 2px),
+      radial-gradient(circle at 88% 38%, rgba(255,246,213,.7) 0 1px, transparent 2px),
+      radial-gradient(circle at 94% 72%, rgba(255,246,213,.5) 0 1px, transparent 2px),
+      radial-gradient(circle at 63% 52%, rgba(94,234,212,.8) 0 1.5px, transparent 3px),
+      radial-gradient(circle at 22% 46%, rgba(167,139,250,.7) 0 1.5px, transparent 3px);
+    pointer-events: none;
+  }
+  .copy { position: relative; z-index: 2; }
+  .eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+    color: #f4d58d;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .28em;
+    text-transform: uppercase;
+  }
+  .eyebrow span { width: 34px; height: 1px; background: linear-gradient(90deg, transparent, #f4d58d); }
+  h1 {
+    margin: 0;
+    font-family: 'Cinzel', serif;
+    font-size: 116px;
+    font-weight: 900;
+    line-height: .86;
+    letter-spacing: .025em;
+    background: linear-gradient(180deg, #fff9e3, #f6c453 46%, #9a5b12);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    filter: drop-shadow(0 18px 44px rgba(246,196,83,.16));
+  }
+  .sub {
+    margin-top: 10px;
+    margin-left: 4px;
+    color: #f4d58d;
+    font-family: 'Cinzel', serif;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: .56em;
+    text-transform: uppercase;
+  }
+  .tagline {
+    max-width: 420px;
+    margin: 26px 0 0;
+    color: #b7adc9;
+    font-size: 17px;
+    line-height: 1.55;
+  }
+  .stats {
+    display: flex;
+    gap: 28px;
+    margin-top: 28px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(244, 213, 141, .18);
+  }
+  .stats div { display: flex; flex-direction: column; gap: 4px; }
+  .stats strong {
+    font-family: 'Cinzel', serif;
+    font-size: 30px;
+    line-height: 1;
+    color: #f4d58d;
+  }
+  .stats span {
+    color: #837898;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+  }
+  .art {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    place-items: center;
+    height: 100%;
+  }
+  .art svg { width: 470px; height: 470px; overflow: visible; filter: drop-shadow(0 26px 70px rgba(0,0,0,.4)); }
+  .footer {
+    position: absolute;
+    left: 66px;
+    right: 66px;
+    bottom: 28px;
+    display: flex;
+    justify-content: space-between;
+    color: #837898;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+  }
+  .footer b { color: #f4d58d; font-weight: 600; }
+</style>
+</head>
+<body>
+  <div class="frame">
+    <div class="stars" aria-hidden="true"></div>
+    <div class="copy">
+      <div class="eyebrow"><span></span> Inoffizielle Fan-Chronik · Open Source</div>
+      <h1>ETERNIA</h1>
+      <div class="sub">Chroniken</div>
+      <p class="tagline">Die Geschichte von He-Man, seinen Freunden und den Schatten, die Eternia nie loslässt.</p>
+      <div class="stats">
+        <div><strong>34</strong><span>Figuren</span></div>
+        <div><strong>8</strong><span>Kapitel</span></div>
+        <div><strong>2</strong><span>Welten</span></div>
+        <div><strong>0</strong><span>Abhängigkeiten</span></div>
+      </div>
+    </div>
+    <div class="art" aria-hidden="true">
+      <svg viewBox="0 0 520 520">
+        <defs>
+          <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#fff6d5"/>
+            <stop offset=".42" stop-color="#f6c453"/>
+            <stop offset="1" stop-color="#9a5b12"/>
+          </linearGradient>
+          <linearGradient id="teal" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#67e8f9"/>
+            <stop offset="1" stop-color="#7c3aed"/>
+          </linearGradient>
+          <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+            <stop offset="0" stop-color="#f6c453" stop-opacity=".28"/>
+            <stop offset="1" stop-color="#f6c453" stop-opacity="0"/>
+          </radialGradient>
+          <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+            <feGaussianBlur stdDeviation="6" result="b"/>
+            <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+        <circle cx="260" cy="260" r="246" fill="url(#glow)"/>
+        <g fill="none" stroke="url(#gold)">
+          <circle cx="260" cy="260" r="238" stroke-opacity=".24"/>
+          <circle cx="260" cy="260" r="220" stroke-opacity=".55" stroke-dasharray="2 10"/>
+          <circle cx="260" cy="260" r="198" stroke-opacity=".15"/>
+          <circle cx="260" cy="260" r="170" stroke-opacity=".35" stroke-dasharray="1 14"/>
+        </g>
+        <g stroke="url(#gold)" stroke-opacity=".5" stroke-width="1.5">
+          <path d="M260 22v20M260 478v20M22 260h20M478 260h20"/>
+          <path d="M92 92l14 14M414 414l14 14M428 92l-14 14M106 414l-14 14"/>
+        </g>
+        <g fill="#f4d58d">
+          <circle cx="118" cy="166" r="2.2"/><circle cx="392" cy="134" r="1.7"/><circle cx="420" cy="330" r="2.4"/>
+          <circle cx="150" cy="388" r="1.6"/><circle cx="332" cy="432" r="1.9"/><circle cx="226" cy="94" r="1.4"/>
+          <circle cx="82" cy="292" r="1.5"/><circle cx="448" cy="236" r="1.4"/>
+        </g>
+        <g fill="rgba(15,9,30,.72)" stroke="url(#gold)" stroke-opacity=".5" stroke-width="1.5">
+          <path d="M152 456V332h34v-28h26v28h22v-50h26v50h20v-50h26v50h22v-28h26v28h34v124"/>
+          <path d="M214 456v-58a46 46 0 0 1 92 0v58"/>
+          <path d="M170 358h10M340 358h10M246 332v-18M294 332v-18"/>
+        </g>
+        <g filter="url(#soft)">
+          <path d="M260 84 292 142v158h-64V142L260 84Z" fill="url(#gold)" stroke="#fff6d5" stroke-opacity=".45" stroke-width="1.5"/>
+          <path d="M260 102v186" stroke="#5b3208" stroke-opacity=".55" stroke-width="2"/>
+          <path d="m260 194-7 10 7 10 7-10-7-10Zm0 42-5 7 5 7 5-7-5-7Z" fill="#3b2206" opacity=".65"/>
+          <path d="M182 300h156c8 0 14 6 14 14v12H168v-12c0-8 6-14 14-14Z" fill="url(#gold)" stroke="#fff6d5" stroke-opacity=".45" stroke-width="1.5"/>
+          <circle cx="196" cy="313" r="10" fill="#0b0718" stroke="#f6c453" stroke-width="2"/>
+          <circle cx="324" cy="313" r="10" fill="#0b0718" stroke="#f6c453" stroke-width="2"/>
+          <rect x="246" y="326" width="28" height="70" rx="10" fill="#2a1740" stroke="url(#gold)" stroke-width="2"/>
+          <path d="M250 340h20M250 354h20M250 368h20M250 382h20" stroke="#f6c453" stroke-opacity=".55" stroke-width="1.5"/>
+          <circle cx="260" cy="407" r="17" fill="#2a1740" stroke="url(#gold)" stroke-width="2"/>
+          <circle cx="260" cy="407" r="6" fill="url(#teal)" filter="url(#soft)"/>
+          <path d="m260 288 11 13-11 13-11-13 11-13Z" fill="url(#teal)" filter="url(#soft)"/>
+        </g>
+      </svg>
+    </div>
+    <div class="footer">
+      <span>Eternia Chroniken · <b>MIT-Lizenz</b> · Keine Abhängigkeiten</span>
+      <span>Inoffizielles Fanprojekt · Keine Verbindung zu Mattel</span>
+    </div>
+  </div>
+</body>
+</html>

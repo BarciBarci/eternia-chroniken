@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">Eternia Chroniken – goldener Machtschwert im dunklen Medaillon</title>
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff6d5"/>
+      <stop offset=".5" stop-color="#f6c453"/>
+      <stop offset="1" stop-color="#a16207"/>
+    </linearGradient>
+    <radialGradient id="bg" cx="50%" cy="32%" r="78%">
+      <stop offset="0" stop-color="#2b174e"/>
+      <stop offset="1" stop-color="#070510"/>
+    </radialGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#bg)"/>
+  <circle cx="32" cy="32" r="23" fill="none" stroke="#f6c453" stroke-opacity=".3"/>
+  <circle cx="32" cy="32" r="27" fill="none" stroke="#f6c453" stroke-opacity=".55" stroke-dasharray="1 4"/>
+  <path d="M32 9 39 20v18H25V20l7-11Z" fill="url(#gold)" stroke="#fff6d5" stroke-opacity=".5"/>
+  <path d="M32 13v21" stroke="#6d470b" stroke-opacity=".45" stroke-width="1.4"/>
+  <path d="M21 38h22v4H21z" fill="url(#gold)"/>
+  <circle cx="23" cy="40" r="1.6" fill="#0b0718" stroke="#f6c453"/>
+  <circle cx="41" cy="40" r="1.6" fill="#0b0718" stroke="#f6c453"/>
+  <path d="M29 42h6v8h-6z" fill="#2a1740" stroke="#f6c453" stroke-width="1.5"/>
+  <path d="M30 44h4M30 47h4" stroke="#f6c453" stroke-opacity=".5"/>
+  <circle cx="32" cy="53" r="4" fill="#2a1740" stroke="#f6c453" stroke-width="1.5"/>
+  <circle cx="32" cy="53" r="1.5" fill="#5eead4"/>
+  <path d="m32 28 3.5 4-3.5 4-3.5-4 3.5-4Z" fill="#5eead4"/>
+</svg>
