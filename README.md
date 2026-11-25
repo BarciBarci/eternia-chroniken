@@ -5,10 +5,13 @@
 [![Lizenz: MIT](https://img.shields.io/badge/Lizenz-MIT-2ea44f.svg)](#lizenz)
 [![Abhängigkeiten: 0](https://img.shields.io/badge/Abh%C3%A4ngigkeiten-0-f6c453.svg)](#warum-vanilla)
 [![Vanilla JS](https://img.shields.io/badge/JavaScript-Vanilla-f7df1e.svg?logo=javascript&logoColor=111)](#technik)
-[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-ready-7c3aed.svg)](#auf-github-pages-veröffentlichen)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-live-7c3aed.svg)](https://barcibarci.github.io/eternia-chroniken/)
 [![PRs willkommen](https://img.shields.io/badge/PRs-willkommen-f472b6.svg)](CONTRIBUTING.md)
+[![Live-Demo](https://img.shields.io/badge/Live%20Demo-barcibarci.github.io-f6c453.svg)](https://barcibarci.github.io/eternia-chroniken/)
 
 ![Vorschau der Eternia Chroniken](assets/img/preview.png)
+
+**Live:** <https://barcibarci.github.io/eternia-chroniken/>
 
 **Eternia Chroniken** erzählt die Legende von He-Man als lesbare, interaktive Website: von den ersten Wächtern von Grayskull über Keldors Fall bis zur Großen Rebellion auf Etheria. 34 Figuren, acht Kapitel, zwei Welten – und der Frage, was Macht bedeutet, wenn man sie nicht für sich selbst will.
 
@@ -75,14 +78,18 @@ Der Check benötigt nur Python 3 und prüft lokale Dateiverweise, Anchor-Ziele, 
 
 ## Auf GitHub Pages veröffentlichen
 
+Die Seite ist bereits veröffentlicht: **<https://barcibarci.github.io/eternia-chroniken/>**
+
+Für einen eigenen Fork oder ein neues Repository:
+
 1. Repository auf GitHub anlegen und den Inhalt dieses Ordners pushen. Der Standardbranch sollte `main` heißen (oder passe die Branch in der Workflow-Datei an).
-2. Im Repository unter **Settings → Pages → Build and deployment** als **Source** die Option **GitHub Actions** wählen.
+2. Im Repository unter **Settings → Pages → Build and deployment** als **Source** die Option **GitHub Actions** wählen. Der mitgelieferte Workflow kann Pages bei Bedarf auch selbst aktivieren.
 3. `.github/workflows/deploy.yml` übernimmt den Rest: Bei jedem Push auf `main` wird die Seite als statisches Artefakt veröffentlicht.
 4. Nach dem ersten erfolgreichen Lauf findest du die URL unter **Settings → Pages** bzw. im Reiter **Actions**.
 
-Die Website nutzt ausschließlich relative Pfade und funktioniert daher sowohl unter `https://BarciBarci.github.io/eternia-chroniken/` als auch unter einer eigenen Domain.
+Die Website nutzt ausschließlich relative Pfade und funktioniert daher sowohl unter `https://barcibarci.github.io/eternia-chroniken/` als auch unter einer eigenen Domain.
 
-**Social-Preview:** Für optimale Vorschauen auf Social Media solltest du in `index.html` die `og:image`- und `twitter:image`-URLs auf die absolute Adresse deiner veröffentlichten Seite setzen (z. B. `https://BarciBarci.github.io/eternia-chroniken/assets/img/og-image.png`). Das Bild liegt bereits unter `assets/img/og-image.png` (1200 × 630).
+**Social-Preview:** Die absoluten `og:url`-, `og:image`- und `twitter:image`-Werte sind bereits auf die GitHub-Pages-Adresse gesetzt. Wenn du eine eigene Domain verwendest, passe sie in `index.html` an.
 
 ## Repository-Link anpassen
 
