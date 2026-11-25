@@ -7,6 +7,7 @@ on:
   workflow_dispatch:
 
 permissions:
+  actions: read
   contents: read
   pages: write
   id-token: write
@@ -37,6 +38,11 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: .
+
+      # GitHub's artifact API can be briefly eventually consistent. Without this
+      # short pause, deploy-pages sometimes sees an empty artifact list.
+      - name: Wait for Pages artifact
+        run: sleep 10
 
       - name: Deploy to GitHub Pages
         id: deployment
